@@ -1,6 +1,9 @@
 // This function returns a function that returns a string
 // Add the types: 
 
+type StringFunction = () => () => string
+type NumberFunction = (x: number) => number
+
 function sayHello(): () => string {
     return () => 'Hello!'
 }
@@ -12,7 +15,7 @@ console.log( hello() ) // Hello!
 console.log( hello() ) // Hello!
 console.log( hello() ) // Hello!
 
-function mathematizer(n: number): (x: number) => number {
+function mathematizer(n: number): NumberFunction {
     let sum = n
     return (x) => x * n
 }

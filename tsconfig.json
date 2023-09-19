@@ -1,9 +1,14 @@
 {
 	"compilerOptions": {},
+	"rootDir": "src",
 	"exclude": [
-		"node_modules",
+		"**/node_modules",
 		"dist",
 		"typings/browser.d.ts",
-		"typings/browser/**"
+		"typings/browser/**",
+		".idea",
+        "build",
+        "typings/globals",
+        "typings/modules"
 	]
 }

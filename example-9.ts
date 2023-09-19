@@ -5,22 +5,23 @@
 // since monsters are only: lizard, flying, or ape
 
 // Import Kaiju and KaijuType from example-8.js
+import { Kaiju, KaijuType } from './example-8'
 
 // Fix the rampage function so it makes use of the KaijuType enum
 
-function rampage(kaiju, city) {
+function rampage(kaiju: Kaiju, city: string) {
 	const { name, type, power } = kaiju
 	let action: string
 	switch(type) {
-		case 'ape': 
+		case KaijuType.ape: 
 			action = 'smash'
 			break
 
-		case 'lizard':
+		case KaijuType.lizard:
 			action = 'burn'
 			break
 
-		case 'flying': 
+		case KaijuType.flying: 
 			action = 'flap'	
 			break
 	} 

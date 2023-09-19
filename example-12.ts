@@ -6,12 +6,16 @@
 // Use a string enum: https://www.typescriptlang.org/docs/handbook/enums.html#string-enums
 
 enum Direction {
-	
+	North = 'North',
+	South = 'South',
+	East = 'East',
+	West = 'West'
 }
 
 // Should having a heading property type Direction
 
 class MapPosition {
+	direction: Direction
 
 	constructor() {
 		
@@ -19,14 +23,13 @@ class MapPosition {
 
 	// takes a new Direction as an argument
 	move(newDirection: Direction) {
-		// set the direction on your property 
-		// Print the new direction
+		this.direction = newDirection
 	}
 
 	// Should return a string and print:
 	// "you are heading <direction>"
 	describe(): string {
-		return ''
+		return 'you are heading ' + this.direction + 'direction'
 	}
 }
 
@@ -34,7 +37,7 @@ const location = new MapPosition()
 console.log(location.describe())
 // Might output:
 // "You are heading north"
-location.move(/* add a direction here */)
+location.move(Direction.North)
 
 
 
